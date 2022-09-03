@@ -5,6 +5,7 @@ ROBY
 Zasymulujmy ewolucję kodu robów
 
 Plansza
+
 Symulacja odbywa się w (ile_tur) turach, Świat robów to prostokątna plansza składająca się z
 rozmiar_planszy_x*rozmiar_planszy_y pól. Roby znajdują się na pojedynczych polach i mogą
 przechodzić między nimi. Zakładamy, że plansza ma posklejane ze sobą brzegi, tak więc po ostatniej
@@ -15,6 +16,7 @@ pocz_ile_robów robów, każdy wyposażony w początkowy program pocz_progr i po
 jednostek energii.
 
 Pola
+
 Na jednym polu może być dowolnie wiele (w tym zero) robów. Każde pole planszy jest jednego z dwu
 rodzajów: puste lub żywieniowe. W tym drugim przypadku jest na nim na początku symulacji
 pożywienie. Jeśli na takie pole wejdzie rob, to zjada to pożywienie (w całości), co daje mu energię do
@@ -26,6 +28,7 @@ Również roby, które na początku symulacji zostaną umieszczone na polach z p
 go zjeść.
 
 Roby
+
 Każdy rob znajduje się na jednym polu planszy i jest skierowany w jednym z czterech kierunków
 (góra, prawo, dól, lewo). Każdy rob ma swój program. W każdej turze wykonuje go instrukcja po
 instrukcji (p. spis instrukcji) do końca (chyba że skończy mu się energia). Wykonanie każdej instrukcji
@@ -38,6 +41,7 @@ roba spadnie poniżej zera, to rob przestaje działać/umiera i od następnej tu
 planszy.
 
 Powielanie
+
 W każdej turze rob może (z prawdopodobieństwem pr_powielenia) powielić się. Powielenie oznacza,
 że w tym samym miejscu pojawia się nowy rob, który ma zmutowany program rodzica i część
 (ułamek_energii_rodzica) jego energii (o tę energię maleje oczywiście zapas energii rodzica).
@@ -46,6 +50,7 @@ energii. Nowopowstały rob jest skierowany w przeciwną stronę niż rodzic. Wyk
 roba oraz zużywanie energii zaczyna się w następnej po powstaniu kolejce.
 
 Mutacje
+
 Kod programu nowego roba może być inny niż kod rodzica. Z prawdopodobieństwem
 pr_usunięcia_instr nowy program ma usuniętą ostatnią instrukcję (o ile oczywiście kod rodzica nie był
 pusty). Z prawdopodobieństwem pr_dodania_instr nowy program ma na końcu kodu jedną, losowo
@@ -55,6 +60,7 @@ mutacje mogą się zdarzyć przy tworzeniu kodu programu (w podanej kolejności)
 zdarzyć, że żadna nie zajdzie.
 
 Spis instrukcji
+
 W kodzie programów mogą występować tylko instrukcje ze spis_instr. Ten spis w kolejnym
 uruchomieniu symulacji może zawierać tylko część z wymienionych poniżej instrukcji (ale może
 zawierać wszystkie, o ile gdzie indziej nie jest podane inaczej):
@@ -67,6 +73,7 @@ zwróć się w jej stronę (bez przechodzenia),
 jeśli tak, to przejdź tam i zjedz, wpp nic nie rób.
 
 Co program ma robić
+
 Program powinien najpierw utworzyć planszę na podstawie pliku plansza.txt.
 Następnie powinien wykonać symulację zgodnie z zadanymi parametrami. Program powinien
 wypisywać w trakcie symulacji co zadaną liczbę tur (co_ile_wypisz ) oraz przed i po zakończeniu
@@ -78,7 +85,10 @@ maksymalna długość programu robów, minimalna, średnia i maksymalna energia 
 245, rob: 120, żyw: 340, prg: 3/4.56/78, energ: 1/4.34/26, wiek: 1/12.46/78
 
 
+
+
 ROBSON
+
 Celem zadania będzie stworzenie interpretera pewnego prostego języka programowania o
 nazwie ROBSON.
 Twój program powinien umożliwiać:
