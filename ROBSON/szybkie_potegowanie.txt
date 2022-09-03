@@ -1,0 +1,124 @@
+{
+"typ": "Blok",
+"instrukcje":[
+    {
+    "typ":"Przypisanie",
+        "nazwa": "x",
+        "wartosc":{
+            "typ": "Liczba",
+            "wartosc":5
+        }
+    },
+    {
+    "typ": "Przypisanie",
+        "nazwa": "potega",
+        "wartosc":{
+            "typ": "Liczba",
+            "wartosc":4
+        }
+    },
+    {
+    "typ": "Przypisanie",
+        "nazwa": "wynik",
+        "wartosc":{
+            "typ": "Liczba",
+            "wartosc":1
+        }
+    },
+    {
+    "typ":"While",
+        "warunek":{
+            "typ": ">",
+            "argument1":{
+                "typ":"Zmienna",
+                "nazwa":"potega"
+            },
+            "argument2":{
+                "typ":"Liczba",
+                "wartosc":0
+            }
+        },
+        "blok":{
+            "typ":"Blok",
+            "instrukcje":[
+            {
+            "typ":"If",
+                "warunek":{
+                    "typ":"==",
+                    "argument1":{
+                        "typ":"Reszta",
+                        "argument1":{
+                            "typ":"Zmienna",
+                            "nazwa":"potega"
+                        },
+                        "argument2":{
+                            "typ":"Liczba",
+                            "wartosc":2
+                        }
+                    },
+                    "argument2":{
+                        "typ":"Liczba",
+                        "wartosc":1
+                    }
+                },
+                "blok_prawda":{
+                "typ":"Blok", 
+                "instrukcje":[
+                {
+                "typ":"Przypisanie",
+                    "nazwa":"wynik",
+                    "wartosc":{
+                        "typ":"Razy",
+                        "argument1":{
+                            "typ":"Zmienna",
+                            "nazwa":"wynik"
+                        },
+                        "argument2":{
+                            "typ":"Zmienna",
+                            "nazwa":"x"
+                        }
+                    }
+                }
+                ]
+            }
+            },
+            {
+            "typ":"Przypisanie",
+                "nazwa":"x",
+                "wartosc":{
+                    "typ":"Razy",
+                    "argument1":{
+                        "typ":"Zmienna",
+                        "nazwa":"x"
+                    },
+                    "argument2":{
+                        "typ":"Zmienna",
+                        "nazwa":"x"
+                    }
+                }
+            },
+            {
+            "typ":"Przypisanie",
+                "nazwa":"potega",
+                "wartosc":{
+                    "typ":"Dzielenie",
+                    "argument1":{
+                        "typ":"Zmienna",
+                        "nazwa":"x"
+                    },
+                    "argument2":{
+                        "typ":"Liczba",
+                        "wartosc":2
+                    }
+                }
+            }
+            ]
+            }
+            },
+            {
+            "typ":"Zmienna",
+                "nazwa":"wynik"
+            }
+    ]
+    }
+                

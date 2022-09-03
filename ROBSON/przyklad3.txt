@@ -1,0 +1,30 @@
+{
+  "typ" : "Blok",
+  "instrukcje" : [ {
+    "typ" : "If",
+    "warunek" : {
+      "typ" : "<",
+      "argument1" : {
+        "typ" : "Liczba",
+        "wartosc" : 2.0
+      },
+      "argument2" : {
+        "typ" : "Liczba",
+        "wartosc" : 1.0
+      }
+    },
+    "blok_prawda" : {
+      "typ" : "Blok",
+      "instrukcje" : [
+      {"typ" : "Przypisanie",
+      "nazwa" : "x",
+      "wartosc" : {
+        "typ" : "True"
+      }
+      } ]
+    }
+  }, {
+    "typ" : "Zmienna",
+    "nazwa" : "x"
+  } ]
+}
